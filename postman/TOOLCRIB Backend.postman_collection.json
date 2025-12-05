@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "3e626fcf-899d-4350-ba51-e6bf715bfefb",
+		"name": "TOOLCRIB Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50455556",
+		"_collection_link": "https://boshokutoyota8-8532707.postman.co/workspace/Toyota-Boshoku's-Workspace~1fddc75a-ecec-4ff0-83ab-795d5d350d5e/collection/50455556-3e626fcf-899d-4350-ba51-e6bf715bfefb?action=share&source=collection_link&creator=50455556"
+	},
+	"item": [
+		{
+			"name": "ObtenerPiezas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoic29uaWEuaHVlcnRhLjIxaXNjQHRlY3NhbnBlZHJvLmVkdS5teCIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzY0Njk1NDAwLCJleHAiOjE3NjQ3MjQyMDB9.QkmcEHUYyYpbz8I8iaqHNwOvumcX5Bv-eLL2mQ9Mey8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/piezas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"piezas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerPiezaEspecifica",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoic29uaWEuaHVlcnRhLjIxaXNjQHRlY3NhbnBlZHJvLmVkdS5teCIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzY0Njk1NDAwLCJleHAiOjE3NjQ3MjQyMDB9.QkmcEHUYyYpbz8I8iaqHNwOvumcX5Bv-eLL2mQ9Mey8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/piezas/52700",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"piezas",
+						"52700"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "piezas?q=algo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoic29uaWEuaHVlcnRhLjIxaXNjQHRlY3NhbnBlZHJvLmVkdS5teCIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzY0Njk1NDAwLCJleHAiOjE3NjQ3MjQyMDB9.QkmcEHUYyYpbz8I8iaqHNwOvumcX5Bv-eLL2mQ9Mey8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/piezas?q=aguja",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"piezas"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "aguja"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Pieza",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoic29uaWEuaHVlcnRhLjIxaXNjQHRlY3NhbnBlZHJvLmVkdS5teCIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzY0Njk1NDAwLCJleHAiOjE3NjQ3MjQyMDB9.QkmcEHUYyYpbz8I8iaqHNwOvumcX5Bv-eLL2mQ9Mey8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id_pieza\": \"80000\",\r\n  \"numero_parte\": \"AAA111\",\r\n  \"descripcion\": \"Pieza nueva de prueba\",\r\n  \"ubicacion_exacta\": \"GAVETA TEST\",\r\n  \"stock\": \"CON STOCK\",\r\n  \"imagen_url\": null,\r\n  \"id_categoria\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/piezas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"piezas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pieza Actualizada",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoic29uaWEuaHVlcnRhLjIxaXNjQHRlY3NhbnBlZHJvLmVkdS5teCIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzY0Njk1NDAwLCJleHAiOjE3NjQ3MjQyMDB9.QkmcEHUYyYpbz8I8iaqHNwOvumcX5Bv-eLL2mQ9Mey8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numero_parte\": \"AAA111\",\r\n  \"descripcion\": \"Pieza actualizada\",\r\n  \"ubicacion_exacta\": \"NUEVA UBICACION X\",\r\n  \"stock\": \"SIN STOCK\",\r\n  \"imagen_url\": null,\r\n  \"id_categoria\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/piezas/80000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"piezas",
+						"80000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Pieza",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoic29uaWEuaHVlcnRhLjIxaXNjQHRlY3NhbnBlZHJvLmVkdS5teCIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzY0Njk1NDAwLCJleHAiOjE3NjQ3MjQyMDB9.QkmcEHUYyYpbz8I8iaqHNwOvumcX5Bv-eLL2mQ9Mey8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/piezas/80000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"piezas",
+						"80000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Admins",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-master-key",
+						"value": "TOOLCRIB1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"dmesta\",\r\n  \"correo\": \"Daniel.Mesta@toyota-boshoku.com\",\r\n  \"contrasena\": \"Tool456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Solicitud Carrito",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoic29uaWEuaHVlcnRhLjIxaXNjQHRlY3NhbnBlZHJvLmVkdS5teCIsInJvbCI6ImFkbWluIiwiaWF0IjoxNzY0Njk1NDAwLCJleHAiOjE3NjQ3MjQyMDB9.QkmcEHUYyYpbz8I8iaqHNwOvumcX5Bv-eLL2mQ9Mey8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre_empleado\": \"Juan Pérez\",\r\n  \"carrito\": [\r\n    { \"id_pieza\": \"52700\", \"cantidad\": 2 },\r\n    { \"id_pieza\": \"52699\", \"cantidad\": 1 }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/solicitudes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"solicitudes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Solicitud Estado",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
